@@ -1,4 +1,4 @@
-	global my_strdup:function
+	global strdup:function
 	extern malloc
 
 	section .text
