@@ -14,4 +14,5 @@ mloop:
 	jmp mloop
 
 end:
+	leave
 	ret
