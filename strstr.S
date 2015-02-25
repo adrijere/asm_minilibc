@@ -9,15 +9,30 @@ strstr:
 	jmp mloop
 
 mloop:
-	cmp byte[rdi + rax], rsi[rcx]
+	test rdi, rdi
+	je end_failure
+	test rsi, rsi
+	je end_failure
+	xor rbx, rbx
+	xor rdx, rdx
+	mov bl, byte[rdi + rax]
+	mov dl, byte[rsi + rcx]
+	cmp bl, dl
+	jne init_rcx
+	cmp byte[rsi + rcx], 0x0
 	je end
-	cmp byte[rdi + rax], 0
+	cmp byte[rdi + rax], 0x0
 	je end_failure
 	inc rax
+	inc rcx
 	jmp mloop
 
+init_rcx:
+	xor rcx, rcx
+	
 end_failure:
 	xor rax, rax
 end:
+	sub rax, rcx
 	leave
 	ret
