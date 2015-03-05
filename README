@@ -29,11 +29,11 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	strchr. --> DONE
 	memset.
 	memcpy.
-	strcmp.
+	strcmp. --> DONE
 	memmove.
 
-	strncmp.
-	strcasecmp.
+	strncmp. --> Pierre
+	strcasecmp. --> Pierre
 	rindex.
 
 	strstr. --> DONE
