@@ -1,3 +1,3 @@
-export LD_PRELOAD="./libasm.so"
+export LD_PRELOAD=`pwd`/libasm.so
 make re
 gcc main.c
