@@ -12,8 +12,8 @@ mloop:
 	        je end
 	        cmp rdx, 0x0
 	        je end_failure
-	        mov byte bl, rdi + rax
-	        mov byte cl, rsi + rax
+	        mov byte bl, [rdi + rax]
+	        mov byte cl, [rsi + rax]
 		add bl, cl
 	        cmp rbx, rdi
 	        je sloop
@@ -21,7 +21,7 @@ mloop:
 	        jmp mloop
 
 sloop:
-		mov byte r8b, rsi + rax
+		mov byte r8b, [rsi + rax]
 		cmp rax, rdx
 		je final_copy
 

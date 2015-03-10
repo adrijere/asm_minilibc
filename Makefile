@@ -5,7 +5,7 @@
 ## Login   <noel_h@epitech.net>
 ## 
 ## Started on  Wed Feb 25 10:42:46 2015 Pierre NOEL
-## Last update Tue Mar 10 11:27:44 2015 Pierre NOEL
+## Last update Tue Mar 10 11:32:53 2015 Pierre NOEL
 ##
 
 NAME		=		libasm.so
@@ -25,6 +25,9 @@ SRC		=		strchr.S	\
 				strcasecmp.S	\
 				rindex.S	\
 				strpbrk.S	\
+				memcpy.S	\
+				memmove.S	\
+				memset.S	\
 
 OBJ		=		$(SRC:.S=.o)
 
