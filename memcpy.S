@@ -1,21 +1,28 @@
 global memcpy:function
-
+	
 section .text
 memcpy:
 	push rbp
 	mov rbp, rsp
 	xor rax, rax
-	mov r8, rdi
-	mov r9, rsi
 	jmp mloop
 
 mloop:
-	mov bl, byte[rdi + rax]
-	mov cl, byte[rsi + rax]
-	add bl, cl
-	cmp bl, r8
+	cmp rax, rdx
 	je end
+	cmp rdx, 0x0
+	je end_failure
+	mov byte bl, rdi + rax
+	mov byte cl, rsi + rax
+	add bl, cl
+	cmp rbx, rdi
+	je end
+	inc rax
+	jmp mloop
 
+end_failure:
+	xor rax, rax
 end:
+	xor rax, rbx
 	leave
 	ret
