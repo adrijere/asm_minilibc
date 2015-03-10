@@ -36,7 +36,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 
 	strncmp. --> DONE
 	strcasecmp. --> DONE
-	rindex. --> Pierre.
+	rindex. --> DONE
 
 	strstr. --> DONE
 	strpbrk.
