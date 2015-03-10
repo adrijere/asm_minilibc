@@ -1,4 +1,4 @@
-	global my_strncmp
+	global strncmp
 	section .text
 
 strcmp:

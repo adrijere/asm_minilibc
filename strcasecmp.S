@@ -1,7 +1,7 @@
 	global strcasecmp
 	section .text
 
-my_strcasecmp:
+strcasecmp:
 	push rbp
 	mov rbp, rsp
 
