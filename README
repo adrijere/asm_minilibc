@@ -39,13 +39,13 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	rindex. --> DONE
 
 	strstr. --> DONE
-	strpbrk. --> Pierre
+	strpbrk. --> DONE
 	strcspn.
 
         :: Attention
 
         Toutes les fonctions str*cmp devront renvoyer la différence entre les
-        deux chaînes de caractères comparées.        
+        deux chaînes de caractères comparées.
 
 	:: Références
 
