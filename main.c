@@ -17,5 +17,8 @@ int		main()
   assert(strncmp(test, test2, 3) == 0);
   printf("Strncmp ok !\n");
   assert(strcasecmp("azerty", "aZErty") == 0);
+  printf("Strcasecmp ok !\n");
+  assert(rindex(test, 'e') == test + 12);
+  printf("Rindex ok !\n");
   return (0);
 }
