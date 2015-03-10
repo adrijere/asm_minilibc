@@ -21,5 +21,6 @@ mloop:
 end_failure:
 	xor rax, rax
 end:
+	mov rax, rbx
 	leave
 	ret
