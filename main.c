@@ -16,5 +16,6 @@ int		main()
   printf("Strcmp ok ! \n");
   assert(strncmp(test, test2, 3) == 0);
   printf("Strncmp ok !\n");
+  assert(strcasecmp("azerty", "aZErty") == 0);
   return (0);
 }
