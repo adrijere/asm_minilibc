@@ -4,22 +4,24 @@ section .text
 strchr:
 	push rbp
 	mov rbp, rsp
-	mov rbx, rsi
+
 	xor rax, rax
-	jmp mloop
+	mov rbx, rsi
 
 mloop:
-	cmp byte [rdi + rax], 0x0
-	jmp end_failure
-	cmp byte [rdi + rax], bl
-	je end
-	inc rax
+	cmp byte [rdi], 0
+	je end_failure
+	cmp byte [rdi], bl
+	je return_pointer
+	inc rdi
 	jmp mloop
 
 end_failure:
 	xor rax, rax
+	jmp end
+
+return_pointer:
+	mov rax, rdi
 end:
 	leave
 	ret
-
-	

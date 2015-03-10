@@ -6,12 +6,14 @@ strcasecmp:
 	mov rbp, rsp
 
 	xor rax, rax
-	xor rcx, rcx
+	xor rbx, rbx
 
 my_main_loop:
 	mov byte al, [rdi]
 	mov byte bl, [rsi]
 	cmp bl, 0
+	je end
+	cmp al, 0
 	je end
 	cmp al, bl
 	jne look_cara
@@ -25,6 +27,7 @@ look_cara:
 	cmp bl, 96
 	jg second_look_cara
 	jmp third_look_cara
+
 second_look_cara:
 	cmp al, 'z'
 	jle change_cara_al
