@@ -5,7 +5,7 @@
 ## Login   <noel_h@epitech.net>
 ## 
 ## Started on  Wed Feb 25 10:42:46 2015 Pierre NOEL
-## Last update Mon Mar  9 17:04:25 2015 Pierre NOEL
+## Last update Tue Mar 10 10:00:02 2015 Pierre NOEL
 ##
 
 NAME		=		libasm.so
@@ -22,7 +22,7 @@ SRC		=		strchr.S	\
 				strdup.S	\
 				strcmp.S	\
 				strncmp.S	\
-
+				strcasecmp.S	\
 
 OBJ		=		$(SRC:.S=.o)
 
