@@ -39,7 +39,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	rindex. --> DONE
 
 	strstr. --> DONE
-	strpbrk.
+	strpbrk. --> Pierre
 	strcspn.
 
         :: Attention
