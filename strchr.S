@@ -9,10 +9,10 @@ strchr:
 	jmp mloop
 
 mloop:
-	cmp byte[rdi + rax], bl
-	je end
 	cmp byte[rdi + rax], 0x0
 	jmp end_failure
+	cmp byte[rdi + rax], bl
+	je end
 	inc rax
 	jmp mloop
 
