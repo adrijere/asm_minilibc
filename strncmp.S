@@ -10,14 +10,14 @@ strcmp:
 	xor r12, r12
 
 my_main_loop:
-	mov al, byte [rdi]
-	mov bl, byte [rsi]
+	mov byte al, [rdi]
+	mov byte bl, [rsi]
 	cmp al, bl
 	jne sub
 	cmp bl, 0
 	je end
 	inc r12
-	cmp dl, byte [r12]
+	cmp byte dl, [r12]
 	je sub
 	inc rdi
 	inc rsi

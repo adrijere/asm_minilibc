@@ -1,3 +1,4 @@
 make re
-export LD_PRELOAD=`pwd`/libasm.so
 gcc main.c
+export LD_PRELOAD=`pwd`/libasm.so
+./a.out

@@ -8,7 +8,7 @@ strlen:
 	jmp mloop
 
 mloop:
-	cmp byte[rdi + rax], 0x0
+	cmp byte [rdi + rax], 0x0
 	je end
 	inc rax
 	jmp mloop

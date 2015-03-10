@@ -15,13 +15,13 @@ mloop:
 	je end_failure
 	xor rbx, rbx
 	xor rdx, rdx
-	mov bl, byte[rdi + rax]
-	mov dl, byte[rsi + rcx]
+	mov byte bl, [rdi + rax]
+	mov byte dl, [rsi + rcx]
 	cmp bl, dl
 	jne init_rcx
-	cmp byte[rsi + rcx], 0x0
+	cmp byte [rsi + rcx], 0x0
 	je end
-	cmp byte[rdi + rax], 0x0
+	cmp byte [rdi + rax], 0x0
 	je end_failure
 	inc rax
 	inc rcx

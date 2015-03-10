@@ -9,8 +9,8 @@ strcmp:
 	xor rcx, rcx
 
 my_main_loop:
-	mov al, byte [rdi]
-	mov bl, byte [rsi]
+	mov byte al, [rdi]
+	mov byte bl, [rsi]
 	cmp al, bl
 	jne sub
 	cmp bl, 0
