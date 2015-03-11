@@ -77,5 +77,12 @@ int		main()
   printf("strspn :\n");
   size = strspn("tintin", "tintou");
   printf("size => %zu\n", size);
+
+  printf("strstr = > %s\n", strstr("TestDeLaMortQuiTue", "Mort"));
+  printf("strdup = > %s\n", strdup("TestGGGG"));
+  printf("strpbrk = > %s \n", strpbrk("TestGGGG", "GGGG"));
+  //str str
+  //strdup
+  //strpbrk
   return (0);
 }
