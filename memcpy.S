@@ -1,16 +1,16 @@
 global memcpy:function
-	
+
 section .text
 memcpy:
 	push rbp
 	mov rbp, rsp
+
 	xor rax, rax
-	jmp mloop
 
 mloop:
 	cmp rax, rdx
 	je end
-	cmp rdx, 0x0
+	cmp byte dl, 0
 	je end_failure
 	mov byte bl, [rdi + rax]
 	mov byte cl, [rsi + rax]
@@ -23,6 +23,6 @@ mloop:
 end_failure:
 	xor rax, rax
 end:
-	mov rax, rbx
+	mov rax, rdi
 	leave
 	ret

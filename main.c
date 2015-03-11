@@ -58,8 +58,8 @@ int		main()
   printf("test4 => %s\n", test4);
   printf("---------\n");
   printf("MEMCOPY :\n");
-  printf("copy %s to %s .. \n", dest, src);
+  printf("copy '%s' to '%s' .. \n", src, dest);
   memcpy(dest, src, 7);
-  printf("dest => %s\n", dest);
+  printf("dest => '%s'\n", dest);
   return (0);
 }
