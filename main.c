@@ -66,8 +66,8 @@ int		main()
   printf("dest => '%s'\n", dest);
   printf("---------\n");
   printf("MEMMOVE :\n");
-  printf("copy '%s' to '%s' .. \n", src, dest);
-  memmove(dest, src, 7);
+  printf("copy '%s' to '%s' .. \n", test4, dest);
+  memmove(dest, test4, 7);
   printf("dest => '%s'\n", dest);
   printf("---------\n");
   printf("strcspn :\n");

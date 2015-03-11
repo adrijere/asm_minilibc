@@ -13,15 +13,16 @@ mloop:
 	je end_failure
 	mov byte bl, [rdi + rax]
 	mov byte cl, [rsi + rax]
-	add bl, cl
-	cmp rbx, rdi
-	je end
+	mov bl, cl 		;add bl, cl
+	mov byte [rdi + rax], bl
+	;//cmp rbx, rdi
+	;//je end
 	inc rax
 	jmp mloop
 
 end_failure:
 	xor rax, rax
 end:
-	mov rax, rdi
+	mov rax, rdi		;rbx
 	leave
 	ret
