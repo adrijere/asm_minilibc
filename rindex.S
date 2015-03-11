@@ -1,6 +1,6 @@
 	global rindex
-	section .text
 
+section .text
 rindex:
 	push rbp
 	mov rbp, rsp
@@ -11,7 +11,7 @@ rindex:
 	mov rbx, rsi
 
 loop:
-	cmp byte [rdi], 0
+	cmp byte [rdi], 0x0
 	je end
 	cmp byte [rdi], bl
 	je continue

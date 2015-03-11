@@ -17,7 +17,8 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 
      :: Bonus
 
-     strdup. --> DONE
+     strdup. --> DONE (a tester)
+     strspn.
 
      Ces quelques idées sont données à titre indicatif & aucun
         bonus ne sera évalué si la partie obligatoire n'est pas implémentée.
@@ -32,7 +33,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	memset. --> DONE
 	memcpy. --> DONE
 	strcmp. --> DONE
-	memmove. --> DONE
+	memmove. --> DONE (A tester)
 
 	strncmp. --> DONE
 	strcasecmp. --> DONE
