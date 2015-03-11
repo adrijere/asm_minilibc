@@ -1,7 +1,7 @@
-	global strcasecmp
+	global my_strcasecmp
 	section .text
 
-strcasecmp:
+my_strcasecmp:
 	push rbp
 	mov rbp, rsp
 
@@ -12,9 +12,9 @@ my_main_loop:
 	mov byte al, [rdi]
 	mov byte bl, [rsi]
 	cmp bl, 0
-	je end
+	je sub
 	cmp al, 0
-	je end
+	je sub
 	cmp al, bl
 	jne look_cara
 	inc rdi
@@ -22,17 +22,17 @@ my_main_loop:
 	jmp my_main_loop
 
 look_cara:
-	cmp al, 96
-	jg second_look_cara
-	cmp bl, 96
-	jg second_look_cara
+	cmp byte al, 'z'
+	jle second_look_cara
+	cmp byte bl, 'z'
+	jle second_look_cara
 	jmp third_look_cara
 
 second_look_cara:
-	cmp al, 'z'
-	jle change_cara_al
-	cmp bl, 'z'
-	jle change_cara_bl
+	cmp byte al, 96
+	jg change_cara_al
+	cmp byte bl, 96
+	jg change_cara_bl
 	jmp third_look_cara
 
 change_cara_al:
@@ -45,7 +45,11 @@ change_cara_bl:
 
 third_look_cara:
 	cmp al, bl
-	je my_main_loop+7
+	jne sub
+	inc rdi
+	inc rsi
+	jmp my_main_loop
+
 sub:
 	sub rax, rbx
 end:
