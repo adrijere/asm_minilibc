@@ -4,13 +4,12 @@ section .text
 memcpy:
 	push rbp
 	mov rbp, rsp
-
 	xor rax, rax
 
 mloop:
 	cmp rax, rdx
 	je end
-	cmp byte dl, 0
+	cmp dl, 0x0
 	je end_failure
 	mov byte bl, [rdi + rax]
 	mov byte cl, [rsi + rax]

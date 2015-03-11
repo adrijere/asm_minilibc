@@ -10,6 +10,7 @@ int		main()
   char		dest[8];
   char		src[11];
   char		test4[6];
+  size_t	size;
 
   test4[0] = 'l';
   test4[1] = 'l';
@@ -39,6 +40,8 @@ int		main()
   src[9] = ' ';
   src[10] = 0;
 
+  size = 0;
+
   assert(strlen(test) == 15);
   printf("Strlen Ok !\n");
   assert(strchr(test, ' ') == test + 2);
@@ -61,5 +64,18 @@ int		main()
   printf("copy '%s' to '%s' .. \n", src, dest);
   memcpy(dest, src, 7);
   printf("dest => '%s'\n", dest);
+  printf("---------\n");
+  printf("MEMMOVE :\n");
+  printf("copy '%s' to '%s' .. \n", src, dest);
+  memmove(dest, src, 7);
+  printf("dest => '%s'\n", dest);
+  printf("---------\n");
+  printf("strcspn :\n");
+  size = strcspn("toto", "tata");
+  printf("size => %zu\n", size);
+  printf("---------\n");
+  printf("strspn :\n");
+  size = strspn("tintin", "tintou");
+  printf("size => %zu\n", size);
   return (0);
 }
