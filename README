@@ -17,8 +17,8 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 
      :: Bonus
 
-     strdup. --> DONE
-     strspn. --> DONE
+     strdup. --> DONE OK
+     strspn. --> DONE NE COMPILE PAS
 
      Ces quelques idées sont données à titre indicatif & aucun
         bonus ne sera évalué si la partie obligatoire n'est pas implémentée.
@@ -28,20 +28,20 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 
 	:: Voici ce que doit comprendre votre libc
 
-	strlen. --> DONE
-	strchr. --> DONE
-	memset. --> DONE
-	memcpy. --> DONE
-	strcmp. --> DONE
-	memmove. --> DONE
+	strlen. --> DONE OK
+	strchr. --> DONE NOK
+	memset. --> DONE OK
+	memcpy. --> DONE NOK
+	strcmp. --> DONE BIZARRE AVEC HTOP MAIS OK
+	memmove. --> DONE NOK
 
-	strncmp. --> DONE
-	strcasecmp. --> DONE
-	rindex. --> DONE
+	strncmp. --> DONE OK
+	strcasecmp. --> DONE OK
+	rindex. --> DONE OK
 
-	strstr. --> DONE
-	strpbrk. --> DONE
-	strcspn. --> DONE
+	strstr. --> DONE NOK
+	strpbrk. --> DONE OK
+	strcspn. --> DONE NE COMPILE PAS
 
         :: Attention
 

@@ -9,14 +9,14 @@ int		main()
   char		*test3 = "Je suis un 3ème test";
   char		dest[8];
   char		src[11];
-  char		test4[6];
+  char		test4[8];
   size_t	size;
 
-  test4[0] = 'l';
-  test4[1] = 'l';
-  test4[2] = 'l';
-  test4[3] = 'l';
-  test4[4] = 'l';
+  test4[0] = '0';
+  test4[1] = '1';
+  test4[2] = '2';
+  test4[3] = '3';
+  test4[4] = '4';
   test4[5] = 0;
 
   dest[0] = 'E';
@@ -41,7 +41,7 @@ int		main()
   src[10] = 0;
 
   size = 0;
-
+  /*
   assert(strlen(test) == 15);
   printf("Strlen Ok !\n");
   assert(strchr(test, ' ') == test + 2);
@@ -63,12 +63,12 @@ int		main()
   printf("MEMCOPY :\n");
   printf("copy '%s' to '%s' .. \n", src, dest);
   memcpy(dest, src, 7);
-  printf("dest => '%s'\n", dest);
+  printf("dest => '%s'\n", dest);*/
   printf("---------\n");
   printf("MEMMOVE :\n");
-  printf("copy '%s' to '%s' .. \n", test4, dest);
-  memmove(dest, test4, 7);
-  printf("dest => '%s'\n", dest);
+  printf("copy '%s' to '%s' .. \n", test4 + 2, test4);
+  memmove(test4, test4 + 2, 3);
+  printf("dest => '%s'\n", test4);
   printf("---------\n");
   printf("strcspn :\n");
   size = strcspn("toto", "tata");
