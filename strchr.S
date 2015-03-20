@@ -9,10 +9,10 @@ strchr:
 	mov rbx, rsi
 
 mloop:
-	cmp byte [rdi], 0x0
-	je end_failure
 	cmp byte [rdi], bl
 	je return_pointer
+	cmp byte [rdi], 0
+	je end_failure
 	inc rdi
 	jmp mloop
 

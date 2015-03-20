@@ -5,7 +5,7 @@
 ## Login   <noel_h@epitech.net>
 ## 
 ## Started on  Wed Feb 25 10:42:46 2015 Pierre NOEL
-## Last update Thu Mar 19 18:17:59 2015 Pierre NOEL
+## Last update Fri Mar 20 22:20:07 2015 Pierre NOEL
 ##
 
 NAME		=		libasm.so
@@ -16,7 +16,7 @@ CC		=		gcc
 
 ASFLAGS		=		-f elf64
 
-SRC		=		strspn.S
+SRC		=		strchr.S
 				#strlen.S
 				#strstr.S
 				##strchr.S	\

@@ -29,7 +29,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	:: Voici ce que doit comprendre votre libc
 
 	strlen. --> DONE OK
-	strchr. --> DONE NOK
+	strchr. --> DONE Corrigé mais toujours Segfault. (???)
 	memset. --> DONE OK
 	memcpy. --> DONE NOK
 	strcmp. --> DONE BIZARRE AVEC HTOP MAIS OK
