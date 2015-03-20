@@ -5,24 +5,23 @@ memcpy:
 	push rbp
 	mov rbp, rsp
 	xor rax, rax
-
-mloop:
-	cmp rax, rdx
+	cmp rsi, 0
 	je end
-	cmp dl, 0x0
+	cmp rdi, 0
+	je end
+mloop:
+	cmp al, dl
+	je end
+	cmp dl, 0
 	je end_failure
-	mov byte bl, [rdi + rax]
-	mov byte cl, [rsi + rax]
-	mov bl, cl 		;add bl, cl
+	mov byte bl, [rsi + rax]
 	mov byte [rdi + rax], bl
-	;//cmp rbx, rdi
-	;//je end
 	inc rax
 	jmp mloop
 
 end_failure:
 	xor rax, rax
 end:
-	mov rax, rdi		;rbx
+	mov rax, rdi
 	leave
 	ret

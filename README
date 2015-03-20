@@ -29,9 +29,9 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	:: Voici ce que doit comprendre votre libc
 
 	strlen. --> DONE OK
-	strchr. --> DONE Corrigé mais toujours Segfault. (???)
+	strchr. --> DONE Corrigé mais toujours Segfault. (bc)
 	memset. --> DONE OK
-	memcpy. --> DONE NOK
+	memcpy. --> DONE Corrigé mais toujours Segfault (ls)
 	strcmp. --> DONE BIZARRE AVEC HTOP MAIS OK
 	memmove. --> DONE NOK
 
@@ -54,5 +54,3 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	dietlibc.
 	glibc.
 	Les pseudo-libc présentes dans la plupart des kernels POSIX.
-
-	
