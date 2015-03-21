@@ -32,7 +32,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
 	strchr. --> DONE Corrigé mais toujours Segfault. (bc)
 	memset. --> DONE OK
 	memcpy. --> DONE Corrigé mais toujours Segfault (ls)
-	strcmp. --> DONE BIZARRE AVEC HTOP MAIS OK
+	strcmp. --> DONE OK
 	memmove. --> DONE NOK
 
 	strncmp. --> DONE OK

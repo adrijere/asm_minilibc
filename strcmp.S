@@ -10,16 +10,18 @@ strcmp:
 
 my_main_loop:
 	mov byte al, [rdi]
-	mov byte bl, [rsi]
-	cmp al, bl
+	mov byte cl, [rsi]
+	cmp al, cl
 	jne sub
-	cmp bl, 0
-	je end
+	cmp cl, 0
+	je sub
+	cmp al, 0
+	je sub
 	inc rdi
 	inc rsi
 	jmp my_main_loop
 sub:
-	sub rax, rbx
+	sub al, cl
 end:
 	leave
 	ret
