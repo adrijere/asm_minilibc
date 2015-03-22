@@ -1,29 +1,35 @@
-global strcspn:function
+global strspn:function
 
 section .text
 strcspn:
 	push rbp
 	mov rbp, rsp
 	xor rax, rax
-	xor rdx, rdx
+	xor r9, r9
 	jmp mloop
 
 mloop:
-	cmp byte [rdi], 0x0
-	je end_failure
-	cmp byte [rdi + rax], 0x0
+	mov al, [rdi + r9]
+	cmp al, 0x0
 	je end
-	cmp byte [rdi + rax], [rsi + rax]
-	je add_cpt
+	mov r8, rsi
+check_loop:
+	mov cl, [r8]
+	cmp cl, al
+	jne check_if
+	jmp end
+	
+check_if:
+	cmp cl, 0x0
+	je end_loop
+	inc r8
+	jmp check_loop
+	
+end_loop:	
+	inc r9
 	jmp mloop
 
-add_cpt:
-	inc rax
-	inc rdx
-	
-end_failure:
-	xor rax, rax
 end:
-	mov rax, rdx
+	mov rax, r8
 	leave
 	ret

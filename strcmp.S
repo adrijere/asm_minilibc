@@ -1,5 +1,6 @@
-	global strcmp
-	section .text
+global strcmp:function
+	
+section .text
 
 strcmp:
 	push rbp

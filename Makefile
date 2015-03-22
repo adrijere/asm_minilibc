@@ -5,7 +5,7 @@
 ## Login   <noel_h@epitech.net>
 ## 
 ## Started on  Wed Feb 25 10:42:46 2015 Pierre NOEL
-## Last update Sat Mar 21 22:45:20 2015 Pierre NOEL
+## Last update Sun Mar 22 09:12:04 2015 Jérémy MATHON
 ##
 
 NAME		=		libasm.so
@@ -16,21 +16,21 @@ CC		=		gcc
 
 ASFLAGS		=		-f elf64
 
-SRC		=		strcmp.S
-				#strlen.S
-				#strstr.S
-				##strchr.S	\
-				#strdup.S	\
-				#strcmp.S	\
-				#strncmp.S	\
-				#strcasecmp.S	\
-				#rindex.S	\
-				#strpbrk.S	\
-				#memcpy.S	\
-				#memmove.S	\
-				#memset.S	\
-				#strpcspn.S	\
-				#strspn.S	\
+SRC		=		strcmp.S	\
+				strlen.S	\
+				strstr.S	\
+				strchr.S	\
+				strdup.S	\
+				strcmp.S	\
+				strncmp.S	\
+				strcasecmp.S	\
+				rindex.S	\
+				strpbrk.S	\
+				memcpy.S	\
+				memmove.S	\
+				memset.S	\
+				strcspn.S	\
+				strspn.S	\
 
 OBJ		=		$(SRC:.S=.o)
 
