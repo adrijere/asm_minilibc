@@ -33,6 +33,6 @@ init_rcx:
 end_failure:
 	xor rax, rax
 end:
-	sub rax, rcx
+	mov rax, rcx
 	leave
 	ret
