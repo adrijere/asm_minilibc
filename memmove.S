@@ -4,34 +4,28 @@ section .text
 memmove:
 	        push rbp
 	        mov rbp, rsp
-	        xor rax, rax
-	        jmp mloop
+	        mov rax, rdx
+		sub rax, 1
+		mov r9, -1
+		mov r10, -1
+		jmp mloop
 
 mloop:
-	        cmp rax, rdx
-	        je end
-	        cmp rdx, 0x0
-	        je end_failure
-	        mov byte bl, [rdi + rax]
-	        mov byte cl, [rsi + rax]
-		add bl, cl
-	        cmp rbx, rdi
-	        je sloop
-	        inc rax
-	        jmp mloop
-
+	        cmp rdi, rsi
+		jg sloop
+		xor rax, rax
+		mov r9, 1
+		mov r10, rdx
+	
 sloop:
-		mov byte r8b, [rsi + rax]
-		cmp rax, rdx
-		je final_copy
-
-final_copy:
-		mov r8b, cl
-		add bl, cl
-
-end_failure:
-	        xor rax, rax
+		cmp rax, r10
+		jz end
+		mov r8b, [rsi +rax]
+		mov [rdi + rax], r8b
+		add rax, r9
+		jmp sloop
+	
 end:
-		mov rax, rbx
+		mov rax, rdi
 		leave
 	        ret
