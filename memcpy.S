@@ -4,24 +4,24 @@ section .text
 memcpy:
 	push rbp
 	mov rbp, rsp
+
 	xor rax, rax
+	xor r8, r8
+
 	cmp rsi, 0
 	je end
 	cmp rdi, 0
 	je end
 mloop:
-	cmp al, dl
+	cmp rax, rdx
 	je end
-	cmp dl, 0
-	je end_failure
-	mov byte bl, [rsi + rax]
-	mov byte [rdi + rax], bl
+	mov byte r8b, [rsi + rax]
+	mov byte [rdi + rax], r8b
 	inc rax
 	jmp mloop
 
-end_failure:
-	xor rax, rax
 end:
+	xor rax, rax
 	mov rax, rdi
 	leave
 	ret
