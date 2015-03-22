@@ -5,7 +5,7 @@
 ## Login   <noel_h@epitech.net>
 ## 
 ## Started on  Wed Feb 25 10:42:46 2015 Pierre NOEL
-## Last update Sun Mar 22 09:12:04 2015 Jérémy MATHON
+## Last update Sun Mar 22 10:52:23 2015 Jérémy MATHON
 ##
 
 NAME		=		libasm.so
@@ -21,7 +21,6 @@ SRC		=		strcmp.S	\
 				strstr.S	\
 				strchr.S	\
 				strdup.S	\
-				strcmp.S	\
 				strncmp.S	\
 				strcasecmp.S	\
 				rindex.S	\
