@@ -6,10 +6,9 @@ strchr:
 	mov rbp, rsp
 
 	xor rax, rax
-	mov rbx, rsi
 
 mloop:
-	cmp byte [rdi], bl
+	cmp byte [rdi], sil
 	je return_pointer
 	cmp byte [rdi], 0
 	je end_failure
