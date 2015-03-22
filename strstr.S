@@ -4,35 +4,37 @@ section .text
 strstr:
 	push rbp
 	mov rbp, rsp
-	xor rax, rax
-	xor rcx, rcx
 	jmp mloop
 
 mloop:
-	test rdi, rdi
+	mov al, [rdi]
+	cmp al, [rsi]
+	je init_rcx
+
+check:
+	cmp al, 0x0
 	je end_failure
-	test rsi, rsi
-	je end_failure
-	xor rbx, rbx
-	xor rdx, rdx
-	mov byte bl, [rdi + rax]
-	mov byte dl, [rsi + rcx]
-	cmp bl, dl
-	jne init_rcx
-	cmp byte [rsi + rcx], 0x0
-	je end
-	cmp byte [rdi + rax], 0x0
-	je end_failure
-	inc rax
-	inc rcx
+	inc rdi
 	jmp mloop
+
+find:
+	mov rax, rdi
+	jmp end
 
 init_rcx:
 	xor rcx, rcx
+sloop:
+	mov al, [rdi + rcx]
+	mov r8b, [rsi + rcx]
+	cmp r8b, 0x0
+	je find
+	cmp al, r8b
+	jne check
+	inc rcx
+	jmp sloop
 	
 end_failure:
 	xor rax, rax
 end:
-	mov rax, rcx
 	leave
 	ret
