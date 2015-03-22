@@ -18,7 +18,7 @@ Mini projet d'assembleur x86_64 : ASM MiniLibC.
      :: Bonus
 
      strdup. --> DONE OK
-     strspn. --> DONE NE COMPILE PAS
+     strspn. --> DONE 
 
      Ces quelques idées sont données à titre indicatif & aucun
         bonus ne sera évalué si la partie obligatoire n'est pas implémentée.
